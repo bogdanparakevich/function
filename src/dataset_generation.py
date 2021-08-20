@@ -1,8 +1,8 @@
 import numpy as np
 
-def ds_generation(a1, b1, c1, a2, b2, c2):
-    x1 = np.arange(a1, b1, c1)
-    x2 = np.arange(a2, b2, c2)
+def ds_generation(first_lim_x1, second_lim_x1, step_x1, first_lim_x2, second_lim_x2, step_x2):
+    x1 = np.arange(first_lim_x1, second_lim_x1, step_x1)
+    x2 = np.arange(first_lim_x2, second_lim_x2, step_x2)
     x = np.array(np.meshgrid(x1,x2)).T.reshape(-1,2)
     x1_new = x[:, 0]
     x2_new = x[:, 1]
